@@ -580,7 +580,7 @@ header{position:relative;padding-right:118px}
         <div class="topTools"><button type="button" id="fsBtn">⛶ 화면 가득</button></div>
     <ol class="cardSteps">
       <li><b>🃏 카드 뽑기</b>를 눌러요.</li>
-      <li>잘 모르겠으면 <b>👀 보여 주기</b>로 먼저 보고 들어요.</li>
+      <li>잘 모르겠으면 <b>👀 예시 보기</b>로 먼저 보고 들어요.</li>
       <li><b>▶ 도전 시작</b>을 누르고 카드대로 <b>5번</b> 쳐요. 다 치면 바로 알려 줘요!</li>
     </ol>
     <details class="setup" id="setupBox" open>
@@ -608,7 +608,7 @@ header{position:relative;padding-right:118px}
       <div class="tapSlots" id="tapSlots" aria-live="polite"></div>
       <p class="cardTapInfo" id="cardTapInfo" aria-live="polite"></p>
       <div class="line cardBtns">
-        <button type="button" class="bigbtn" id="cardDemo">👀 보여 주기</button>
+        <button type="button" class="bigbtn" id="cardDemo">👀 예시 보기</button>
         <button type="button" class="bigbtn primary" id="cardGo">▶ 도전 시작</button>
       </div>
     </div>
@@ -859,7 +859,7 @@ header{position:relative;padding-right:118px}
   document.addEventListener("visibilitychange",()=>{ if(document.visibilityState==="visible") keepAwake(); });
   $("cardHint").addEventListener("click",()=>{ $("cardHintTxt").hidden=!$("cardHintTxt").hidden; $("cardHint").textContent=$("cardHintTxt").hidden?"💡 힌트 보기":"💡 힌트 숨기기"; });
 
-  // 👀 보여 주기: 카드대로 5번 쳐서 보여 줌 (기록하지 않음)
+  // 👀 예시 보기: 카드대로 5번 쳐서 보여 줌 (기록하지 않음)
   $("cardDemo").addEventListener("click",async()=>{
     if(!cardCur||cardTaps||cardBusy) return;
     const S=CARD_SND[cardCur.s], kal=cardCur.i==="kal";
